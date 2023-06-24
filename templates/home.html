@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Enter Data for Prediction</h1>
+    <form action="/predict_datapoint" method="post">
+        <label for="NH4">NH4:</label>
+        <input type="text" id="NH4" name="NH4" required><br><br>
+        
+        <label for="NO3">NO3:</label>
+        <input type="text" id="NO3" name="NO3" required><br><br>
+        
+        <label for="WFPS25cm">WFPS25cm:</label>
+        <input type="text" id="WFPS25cm" name="WFPS25cm" required><br><br>
+        
+        <label for="Replication">Replication:</label>
+        <select id="Replication" name="Replication" required>
+            <option value="R1">R1</option>
+            <option value="R2">R2</option>
+            <option value="R3">R3</option>
+            <option value="R4">R4</option>
+            <option value="R5">R5</option>
+        </select><br><br>
+        
+        <label for="PP7">PP7:</label>
+        <input type="text" id="PP7" name="PP7" required><br><br>
+        
+        <label for="DAF_TD">DAF_TD:</label>
+        <input type="text" id="DAF_TD" name="DAF_TD" required><br><br>
+        
+        <label for="AirT">AirT:</label>
+        <input type="text" id="AirT" name="AirT" required><br><br>
+        
+        <label for="PP2">PP2:</label>
+        <input type="text" id="PP2" name="PP2" required><br><br>
+        
+        <label for="DAF_SD">DAF_SD:</label>
+        <input type="text" id="DAF_SD" name="DAF_SD" required><br><br>
+        
+        <label for="DataUse">DataUse:</label>
+        <select id="DataUse" name="DataUse" required>
+            <option value="Building">Building</option>
+            <option value="Testing">Testing</option>
+        </select><br><br>
+        
+        <label for="Vegetation">Vegetation:</label>
+        <select id="Vegetation" name="Vegetation" required>
+            <option value="Corn">Corn</option>
+            <option value="GLYMX">GLYMX</option>
+            <option value="TRIAE">TRIAE</option>
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <h2>
+        The Prediction is {{results}}
+    </h2>
+</body>
+</html>
